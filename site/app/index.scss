@@ -3,24 +3,34 @@
 @import './core/css/common';
 @import './core/css/logo';
 
-// @import url(https://fonts.googleapis.com/css?family=Cinzel:400,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600');
 
-body, html{
-  height: 100%;
+body,
+html{
+  color: $font;
+  background: $clouds;
 }
+a{
+  @include transition(all .3s ease);
 
-.glyphicon {
-    display: inline-block;
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  color: rgba($link,.7);
+  &:hover{
+    color: $link;
+  }
 }
-.glyphicon-chevron-left:before {
-  content: "\f053";
+.glyphicon{
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-chevron-right:before {
-  content: "\f054";
+.glyphicon-chevron-left:before{
+  content: '\f053';
+}
+.glyphicon-chevron-right:before{
+  content: '\f054';
 }

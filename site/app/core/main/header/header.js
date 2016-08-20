@@ -7,7 +7,6 @@ export default ngModule => {
       scope: {},
       controllerAs: 'header',
       controller: function mainHeaderCtrl() {
-        // this.parallaxBg = 'img/header.jpg';
       },
     };
   });

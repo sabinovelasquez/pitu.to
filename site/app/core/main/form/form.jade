@@ -1,0 +1,20 @@
+.container
+  .col-xs-12.col-sm-6.col-md-4.col-centered
+    form.text-center
+      .form-group
+        label
+          | Email
+        input.form-control(ng-model='form.email', type='email', required)
+      .form-group
+        label
+          | Github (opcional)
+        input.form-control(ng-model='form.git', type='text', required)
+      .form-group
+        label
+          | Selecciona tus habilidades
+        .tags
+          span.label.tag(ng-repeat='tag in form.tags')
+            | {{tag}}
+      button.text-center.btn-submit(type='submit')
+        | Añádeme a Slack
+        i.fa.fa-slack
